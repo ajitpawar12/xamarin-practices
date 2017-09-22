@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XFApp.Views.EmployeeListPage"
+             Title="Employee List">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Start" HorizontalOptions="Center">
+            <Button x:Name="AddNewButton" Clicked="AddNewButton_OnClicked" Text="Add New Entry" BackgroundColor="DarkSlateGray" TextColor="Black"/>
+            <ListView x:Name="EmployeesListView" ItemsSource="{Binding Employees}">
+               <ListView.ItemTemplate>
+                   <DataTemplate>
+
+                        <ImageCell Text="{Binding FullName}" TextColor="Purple"
+                                      Detail="{Binding Email}" DetailColor="Maroon"
+                                      ImageSource="{Binding ImageUrl}"></ImageCell>
+                   </DataTemplate>
+               </ListView.ItemTemplate>
+           </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

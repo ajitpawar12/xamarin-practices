@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XFApp.Views.ListViewPage"
+             Title="ListView Page">
+    <ContentPage.Content>
+        <StackLayout Spacing="10" Padding="10">
+            <Label Text="Speaker's List at Ndc 2017" FontSize="24"/>
+            <ListView x:Name="ListSpeakers" ItemsSource="{Binding Speakers}" ItemSelected="ListSpeakers_OnItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <!--<TextCell Text="{Binding SpeakerTopic}" TextColor="Purple"
+                                  Detail="{Binding SpeakerName}" DetailColor="Maroon"></TextCell>-->
+                        <ImageCell Text="{Binding SpeakerTopic}" TextColor="Purple"
+                                   Detail="{Binding SpeakerName}" DetailColor="Maroon"
+                                   ImageSource="{Binding SpeakerImageUrl}"></ImageCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XFApp.HomePage"
+             Title="Home Page">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin Forms!" />
+            
+            <Entry x:Name="MainEntry"/>
+            <Button x:Name="MainButton" Clicked="MainButton_OnClicked" Text="Say Hello !"/>
+            <Label x:Name="MainLabel"/>
+            <Button x:Name="NavigateToMvvmDemoPage" Clicked="NavigateToMvvmDemoPage_OnClicked" Text="Navigate to MvvmDemo Page" BackgroundColor="CadetBlue" TextColor="AliceBlue"/>
+            <Button x:Name="NavigateToListview" Clicked="NavigateToListview_OnClicked" Text="Navigate to Listview Page" BackgroundColor="CornflowerBlue" TextColor="Coral"/>
+            <Button x:Name="NavigateToEmployee" Clicked="NavigateToEmployee_OnClicked" Text="Navigate to Employee Page" BackgroundColor="Coral" TextColor="CornflowerBlue"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
