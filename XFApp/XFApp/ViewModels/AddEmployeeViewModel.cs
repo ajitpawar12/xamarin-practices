@@ -9,6 +9,7 @@ using Xamarin.Forms;
 using XFApp.Annotations;
 using XFApp.Data;
 using XFApp.Models;
+using XFApp.Views;
 
 namespace XFApp.ViewModels
 {
@@ -20,7 +21,7 @@ namespace XFApp.ViewModels
         private string _phone;
         private double _salary;
         private string _imageUrl;
-        
+
         public Employee Employee { get; set; }
         public string FullName
         {
@@ -86,7 +87,7 @@ namespace XFApp.ViewModels
                         Phone = _phone,
                     };
                     AddEmployee(Employee);
-                    
+
                 });
             }
             

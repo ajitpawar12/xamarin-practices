@@ -14,7 +14,7 @@
             <Entry Text="{Binding Phone}"/>
             <Label Text="Salary :" />
             <Entry Text="{Binding Salary}"/>
-            <Button x:Name="SaveButton" Command="{Binding SaveCommand}"></Button>
+            <Button Text="SAVE" x:Name="SaveButton" Command="{Binding SaveCommand}"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
