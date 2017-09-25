@@ -16,7 +16,7 @@ namespace XFApp.Views
         public AddEmployeePage()
         {
             InitializeComponent();
-            BindingContext=new AddEmployeeViewModel();
+            //BindingContext=new AddEmployeeViewModel();
         }
     }
 }

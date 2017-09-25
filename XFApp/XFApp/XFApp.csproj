@@ -39,6 +39,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Converters\TextToColorConverter.cs" />
+    <Compile Include="Data\EmployeeManager.cs" />
     <Compile Include="Data\IRestService.cs" />
     <Compile Include="Data\RestService.cs" />
     <Compile Include="HomePage.xaml.cs">

@@ -4,14 +4,17 @@ using System.Linq;
 using System.Text;
 
 using Xamarin.Forms;
+using XFApp.Data;
 
 namespace XFApp
 {
     public partial class App : Application
     {
+        public  static EmployeeManager EmployeeManager {get; private set; }
         public App()
         {
             InitializeComponent();
+            EmployeeManager=new EmployeeManager(new RestService());
             MainPage = new NavigationPage(new HomePage());
 
             //MainPage=new TabbedPage

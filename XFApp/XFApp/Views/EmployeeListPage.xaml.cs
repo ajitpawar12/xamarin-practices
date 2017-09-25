@@ -17,7 +17,13 @@ namespace XFApp.Views
         public EmployeeListPage()
         {
             InitializeComponent();
-            BindingContext = new EmployeeListViewModel();
+           // BindingContext = new EmployeeListViewModel();
+        }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            EmployeesListView.ItemsSource = await App.EmployeeManager.GetTaskAsync(); ;
         }
 
         private async void AddNewButton_OnClicked(object sender, EventArgs e)

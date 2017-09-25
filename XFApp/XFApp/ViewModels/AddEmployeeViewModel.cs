@@ -88,14 +88,23 @@ namespace XFApp.ViewModels
                     };
                     AddEmployee(Employee);
 
+                    NaviagtePage();
+
                 });
             }
             
         }
 
-        public void AddEmployee(Employee employee)
+        public  void AddEmployee(Employee employee)
         {
            restService.SaveEmployee(employee);
+        }
+
+        public async void NaviagtePage()
+        {
+            var currentPage = Application.Current.MainPage.Navigation.NavigationStack.LastOrDefault();
+
+            if (currentPage != null) await currentPage.Navigation.PushAsync(new EmployeeListPage());
         }
 
         public AddEmployeeViewModel()

@@ -1,8 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:XFApp.ViewModels;assembly=XFApp"
              x:Class="XFApp.Views.EmployeeDetailsPage"
              Title="Employee Detail">
+    <ContentPage.BindingContext>
+        <viewModels:EmployeeDetailsViewModel />
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Welcome to Xamarin Forms!" />

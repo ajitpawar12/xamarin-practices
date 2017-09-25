@@ -9,6 +9,7 @@
             <converters:TextToColorConverter x:Key="TextToColorConverter"/>
         </ResourceDictionary>
     </ContentPage.Resources>
+    
     <ContentPage.Content>
         
         <StackLayout VerticalOptions="Center">

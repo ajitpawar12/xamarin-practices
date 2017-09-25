@@ -13,14 +13,18 @@ namespace XFApp.ViewModels
 {
     public class EmployeeListViewModel: INotifyPropertyChanged
     {
-
         public List<Employee> Employees { get; set; }
+
 
         public EmployeeListViewModel()
         {
-
+            //GetAllEmployee();
         }
-    
+        private async void GetAllEmployee()
+        {
+            Employees =await App.EmployeeManager.GetTaskAsync();
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
 
