@@ -10,6 +10,7 @@ namespace XFWebApi.Controllers
     {
         public ActionResult Index()
         {
+            var p = Request.Url.GetLeftPart(UriPartial.Authority);
             ViewBag.Title = "Home Page";
 
             return View();

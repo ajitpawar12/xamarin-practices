@@ -13,15 +13,15 @@ namespace XFApp.Data
 {
     public class RestService:IRestService
     {
-        HttpClient client;
+        readonly HttpClient _client;
        public static string RestUrl = "http://192.168.0.4:1000/api/values";
 
-        Uri uri = new Uri(string.Format(RestUrl, string.Empty));
+        readonly Uri _uri = new Uri(string.Format(RestUrl, string.Empty));
 
         public RestService()
         {
-            client = new HttpClient();
-            client.MaxResponseContentBufferSize = 256000;
+            _client = new HttpClient();
+            _client.MaxResponseContentBufferSize = 256000;
             
         }
 
@@ -31,7 +31,7 @@ namespace XFApp.Data
         {
             try
             {
-                var response = await client.GetAsync(uri);
+                var response = await _client.GetAsync(_uri);
                 if (response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsStringAsync();
@@ -62,7 +62,7 @@ namespace XFApp.Data
 
                 if (employee != null)
                 {
-                    response = await client.PostAsync(uri, content);
+                    response = await _client.PostAsync(_uri, content);
                 }
                 if (response.IsSuccessStatusCode)
                 {
