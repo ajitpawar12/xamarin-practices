@@ -15,8 +15,8 @@ namespace XFApp
         {
             InitializeComponent();
             EmployeeManager=new EmployeeManager(new RestService());
-            MainPage = new NavigationPage(new HomePage());
-
+            MainPage = new XAppMaster();
+          
             //MainPage=new TabbedPage
             //{
             //    Children =

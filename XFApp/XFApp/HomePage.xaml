@@ -13,6 +13,10 @@
             <Button x:Name="NavigateToMvvmDemoPage" Clicked="NavigateToMvvmDemoPage_OnClicked" Text="Navigate to MvvmDemo Page" BackgroundColor="CadetBlue" TextColor="AliceBlue"/>
             <Button x:Name="NavigateToListview" Clicked="NavigateToListview_OnClicked" Text="Navigate to Listview Page" BackgroundColor="CornflowerBlue" TextColor="AliceBlue"/>
             <Button x:Name="NavigateToEmployee" Clicked="NavigateToEmployee_OnClicked" Text="Navigate to Employee Page" BackgroundColor="Coral" TextColor="AliceBlue"/>
+            <StackLayout>
+                <Image Source="https://192.168.10.54:1015/Files/Poses/new%20Bow%20Pose/Images/TitleImage.png"></Image>
+            </StackLayout>
         </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>

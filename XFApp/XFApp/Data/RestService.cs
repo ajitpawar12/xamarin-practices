@@ -14,7 +14,7 @@ namespace XFApp.Data
     public class RestService:IRestService
     {
         readonly HttpClient _client;
-       public static string RestUrl = "http://192.168.0.4:1000/api/values";
+       public static string RestUrl = "http://192.168.10.89.1000/api/values";
 
         readonly Uri _uri = new Uri(string.Format(RestUrl, string.Empty));
 

@@ -22,5 +22,6 @@
 
             <Label Text="{Binding Message}" TextColor="{Binding Message, Converter={StaticResource TextToColorConverter}}"/>
         </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>
